@@ -13,11 +13,11 @@ docker run -d --name phpmyadmin --network=mynetwork \
 docker run -it -p 8081:8080 --name mykeycloak -e KEYCLOAK_ADMIN=admin \
     -e KEYCLOAK_ADMIN_PASSWORD=admin123 quay.io/keycloak/keycloak:21.0.2 start-dev
 ```
-Once phpMyAdmin is accessible (in our example via http://localhost:8080), we create a user and update the MySQL user credentials in our application's configuration file
+Once phpMyAdmin is accessible (in our example via `http://localhost:8080`), we create a user and update the MySQL user credentials in our application's configuration file
 (these can be found at resources/application.properties in the Spring Boot project.
 
 ## Keycloak Configuration
-
+At this point, we can access Keycloak's admin console, typically at `http://localhost:8081`, and perform the following configuration steps:
 1) Create Realm: Set up a new realm named `angular-apps-realm` to isolate and manage the configurations for our Angular applications.
 2) Clients: `book-app` and `product-app` with redirect URLs `http://localhost:4200/` and `http://localhost:4201/`
 3) Roles and Groups: Inside each client, define roles `admin-books` and `view-books` for `book-app`; `admin-products` and `view-products` for `product-app`.
