@@ -25,6 +25,8 @@ Additionally, create two groups, `admin` and `customer`, and assign appropriate 
 Filter by clients in the assign role window to simplify this process.
 5) User Management: Create two users, set credentials for them, and assign the customer group to one user and the admin group to the other user.
 
+<img width="568" alt="Bildschirmfoto 2024-07-30 um 03 49 27" src="https://github.com/user-attachments/assets/83c8ff7c-0e4b-45cc-9b68-b813e255da37">
+
 Now, with the backend ready and running, we set up the frontend by navigating to each of the Angular project directories (angular-apps) and
 running the commands from the following script to install all the necessary dependencies and start one Angular project on the default port 4200 and the other on 4201.
 ```bash
